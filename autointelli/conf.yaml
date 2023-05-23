@@ -1,0 +1,169 @@
+# Example YAML file with a list and a dictionary
+
+cls_models:
+  - LogisticRegression
+  - GaussianNB
+  - DecisionTreeClassifier
+  - RandomForestClassifier
+  - SVC
+  - KNeighborsClassifier
+  - GradientBoostingClassifier
+  - AdaBoostClassifier
+  - MLPClassifier
+  - CNN (Convolutional Neural Network)
+  - RNN (Recurrent Neural Network)
+  - LSTM (Long Short-Term Memory)
+  - XGBClassifier (Extreme Gradient Boosting)
+  - LGBMClassifier (LightGBM)
+  - CatBoostClassifier
+  - DeepLearningClassifierperson
+
+reg_models:
+  - LinearRegression
+  - RidgeRegression
+  - LassoRegression
+  - ElasticNetRegression
+  - SVR
+  - DecisionTreeRegression
+  - RandomForestRegression
+  - GradientBoostingRegression
+  - AdaBoostRegression
+  - KNeighborsRegression
+  - BayesianRegression
+  - GaussianProcessRegression
+  - NeuralNetworkRegression
+  - CNNRegression
+  - RNNRegression
+  - LSTMRegression
+  - XGBoostRegression
+  - LightGBMRegression
+  - CatBoostRegression
+
+XGBoostRegression_avoid_overfitting:
+  - name: learning_rate
+    value: [0.01,0.1]
+  - name: max_depth
+    value: [6,30]
+  - name: min_child_weight
+    value: [1,10]
+  - name: subsample
+    value: [0.8, 1.0]
+  - name: colsample_bytree
+    value: [0.8, 1.0]
+  - name: gamma
+    value: [0,1]
+  - name: reg_alpha
+    value: [0,1]
+  - name: reg_lambda
+    value: [1,10]
+  - name: max_delta_step
+    value: [0,1]
+
+XGBoostClassifier_avoid_overfitting:
+  - name: learning_rate
+    value: [0.01,0.1]
+  - name: max_depth
+    value: [6,30]
+  - name: min_child_weight
+    value: [1,10]
+  - name: subsample
+    value: [0.8, 1.0]
+  - name: colsample_bytree
+    value: [0.8, 1.0]
+  - name: gamma
+    value: [0,1]
+  - name: reg_alpha
+    value: [0,1]
+  - name: reg_lambda
+    value: [1,10]
+  - name: max_delta_step
+    value: [0,1]
+  - name: scale_pos_weight
+    value: [0.5,1.5]
+
+FeatureSelectors:
+  - RecursiveFeatureAdditionFeatureSelector
+  - RecursiveFeatureEliminationFeatureSelector
+  - SelectByShufflingFeatureSelector
+  - ShapFeatureSelector
+  - SingleFeaturePerformanceFeatureSelector
+
+ClassificationMetrics:
+  - accuracy
+  - balanced_accuracy
+  - average_precision
+  - brier_score_loss
+  - classification_report
+  - confusion_matrix
+  - f1_score
+  - hamming_loss
+  - hinge_loss
+  - jaccard_score
+  - log_loss
+  - matthews_corrcoef
+  - precision
+  - recall
+  - roc_auc
+  - roc_curve
+  - zero_one_loss 
+
+RegressionMetrics:
+  - mean_absolute_error
+  - mean_squared_error
+  - root_mean_squared_error
+  - median_absolute_error
+  - r2_score
+  - explained_variance_score
+  - max_error
+
+Scalers:
+  - sklearn.preprocessing.StandardScaler
+  - sklearn.preprocessing.MinMaxScaler
+  - sklearn.preprocessing.RobustScaler
+  - sklearn.preprocessing.MaxAbsScaler
+  - sklearn.preprocessing.PowerTransformer
+  - sklearn.preprocessing.QuantileTransformer
+  - sklearn.preprocessing.Normalizer
+
+Normalizers:
+  - sklearn.preprocessing.Normalizer
+
+Standardizers:
+  - sklearn.preprocessing.StandardScaler
+
+CategoryEncoders:
+  - category_encoders.BackwardDifferenceEncoder
+  - category_encoders.BaseNEncoder
+  - category_encoders.BinaryEncoder
+  - category_encoders.CatBoostEncoder
+  - category_encoders.CountEncoder
+  - category_encoders.GLMMEncoder
+  - category_encoders.HashingEncoder
+  - category_encoders.HelmertEncoder
+  - category_encoders.JamesSteinEncoder
+  - category_encoders.LeaveOneOutEncoder
+  - category_encoders.MEstimateEncoder
+  - category_encoders.OneHotEncoder
+  - category_encoders.OrdinalEncoder
+  - category_encoders.SumEncoder
+  - category_encoders.TargetEncoder
+  - category_encoders.WOEEncoder
+
+NullImputer:
+  - feature_engine.missing_data_imputers.ArbitraryNumberImputer
+  - feature_engine.missing_data_imputers.CategoricalVariableImputer
+  - feature_engine.missing_data_imputers.EndTailImputer
+  - feature_engine.missing_data_imputers.MeanMedianImputer
+  - feature_engine.missing_data_imputers.RandomSampleImputer
+  - feature_engine.missing_data_imputers.RandomSampleMedianImputer
+  - feature_engine.missing_data_imputers.RandomSampleArbitraryImputer
+  - feature_engine.missing_data_imputers.AddNaNBinaryImputer
+OutlierResolvers:
+  - feature_engine.outliers.OutlierTrimmer
+  - feature_engine.outliers.Winsorizer
+  - feature_engine.outliers.WinsorizerRight
+  - feature_engine.outliers.WinsorizerLeft
+  - feature_engine.outliers.WinsorizerMinMax
+  - feature_engine.outliers.OutlierWinsorizer
+  - feature_engine.outliers.OutlierRemover
+  - feature_engine.outliers.OutlierScaler

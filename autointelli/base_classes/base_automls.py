@@ -537,7 +537,7 @@ class BestEstimatorFindByGridSearch(BestEstimatorGetterStrategy):
         return bst
 
 
-class BestEstimatorFindByRandomSearch(BestEstimatorGetter):
+class BestEstimatorFindByRandomSearch(BestEstimatorGetterStrategy:
 
     """
     A child class of BestEstimatorGetter. This class aim is to
